@@ -28,7 +28,7 @@ This is a monorepo containing the source code for the IDP Platform, consisting o
    ```bash
    npm run start:dev
    ```
-   The backend will run on http://localhost:3000 (default NestJS port).
+   The backend will run on http://localhost:3001.
 
 ### Frontend
 
@@ -45,7 +45,27 @@ This is a monorepo containing the source code for the IDP Platform, consisting o
    npm run dev
    ```
    The frontend will run on http://localhost:3000 (default Next.js port).
-   > **Note:** If the backend is already running on port 3000, Next.js will usually prompt to use a different port (e.g., 3001).
+
+## Environment Variables
+
+To run this project, you will need to add the following environment variables to your .env file.
+
+### Backend
+
+Create a `.env` file in the `backend` directory:
+
+```bash
+GEMINI_API_KEY=your_gemini_api_key
+JENKINS_JOB_NAME=default-pipeline # Optional
+```
+
+### Frontend
+
+Create a `.env.local` file in the `frontend` directory:
+
+```bash
+NEXT_PUBLIC_API_URL=http://localhost:3001 # URL of the backend API
+```
 
 ## Technologies
 
